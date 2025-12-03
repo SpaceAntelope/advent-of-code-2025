@@ -1,13 +1,14 @@
 namespace Day01.Tests
 
 open Xunit
-open Day01
+open Day01.Common
+open Day01.PartOne
 open System.IO
 
 module PasswordCalculationTest =  
       
     [<Fact>]
-    let CalculateZeroClicks_Works() =
+    let ``Calculate all the times the dial stops at zero``() =
 
         let expected = 3
 
@@ -15,7 +16,7 @@ module PasswordCalculationTest =
             "./data/input.example"
             |> File.ReadAllLines
             |> Array.map Rotation.From
-            |> Day01.calculateZeroClicks
+            |> calculateZeroClicks
             |> _.zeroCount
         
         Assert.Equal(expected, actual)

@@ -1,7 +1,7 @@
 namespace Day01.Tests
 
 open Xunit
-open Day01
+open Day01.Common
 open System.IO
 
 
@@ -30,6 +30,6 @@ module TransitionTests =
     [<Theory>]
     [<ClassData(typeof<TransitionData>)>]
     let TransitionDial start rotation expected =
-        let actual = Day01.Rotation.Transition rotation start
+        let actual = Rotation.Transition rotation start
         Assert.Equal(expected, actual)
    

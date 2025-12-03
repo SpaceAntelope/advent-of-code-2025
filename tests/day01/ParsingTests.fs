@@ -1,7 +1,7 @@
 namespace Day01.Tests
 
 open Xunit
-open Day01
+open Day01.Common
 open System.IO
 
 type ParseData() =
@@ -17,7 +17,7 @@ module ParsingTests =
     [<Theory>]
     [<ClassData(typeof<ParseData>)>]
     let ``Parse sample rotations from string`` source expected =
-        let actual = Day01.Rotation.From source
+        let actual = Rotation.From source
         Assert.Equal(expected, actual)
 
     [<Fact>]
