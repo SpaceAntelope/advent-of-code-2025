@@ -1,9 +1,11 @@
 <Solution>
   <Folder Name="/advent/">
     <Project Path="src/day01/Day01.fsproj" />
+    <Project Path="src/day02/Day02.fsproj" />
   </Folder>
   <Folder Name="/tests/">
     <Project Path="tests/day01/Day01.Tests.fsproj" />
+    <Project Path="tests/day02/Day02.Tests.fsproj" />
   </Folder>
   <Folder Name="/solution items/">
     <File Path="Directory.Build.props" />
