@@ -9,6 +9,10 @@ module Common =
     type Rotation =
         | L of int
         | R of int
+        with member x.Steps =
+                match x with
+                | L steps -> steps
+                | R steps -> steps
 
     module Rotation = 
         let From (line: string) =

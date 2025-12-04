@@ -7,6 +7,7 @@
   <ItemGroup>
     <Compile Include="Common.fs" />
     <Compile Include="PartOne.fs" />
+    <Compile Include="PartTwo.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 

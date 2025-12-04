@@ -15,5 +15,8 @@ module Program =
         |> _.zeroCount 
         |> printfn "Part 1: The actual password to open the door is %d."
         
-        
+        rotations
+        |> PartTwo.calculateZeroClicks 
+        |> _.zeroCount 
+        |> printfn "Part 1: Using password method 0x434C49434B, the password to open the door is %d."
         0
