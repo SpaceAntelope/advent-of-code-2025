@@ -1,4 +1,4 @@
-﻿namespace Day01 
+﻿namespace Day02
 
 module Program =
 
@@ -7,16 +7,12 @@ module Program =
     [<EntryPoint>]
     let main argv =
         let file = argv[0]
-        let rotations = file |> Day01.Common.parse 
+        let ranges = file |> Common.parse 
         
         
-        rotations
-        |> PartOne.calculateZeroClicks 
-        |> _.zeroCount 
-        |> printfn "Part 1: The actual password to open the door is %d."
+        ranges
+        |> Array.collect PartOne.findSillyNumbersInRange
+        |> Array.sum
+        |> printfn "Part 1: If you add up all of the invalid IDs you get %d."
         
-        rotations
-        |> PartTwo.calculateZeroClicks 
-        |> _.zeroCount 
-        |> printfn "Part 2: Using password method 0x434C49434B, the password to open the door is %d."
         0

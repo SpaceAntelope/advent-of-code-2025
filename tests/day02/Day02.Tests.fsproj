@@ -14,7 +14,9 @@
 
   <ItemGroup>
     <Compile Include="Properties/AssemblyInfo.fs" />
+    <Compile Include="TestData.fs" />
     <Compile Include="ParsingTests.fs" />
+    <Compile Include="SillyNumbersTests.fs" />
   </ItemGroup>
 
   <ItemGroup>
