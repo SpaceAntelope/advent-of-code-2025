@@ -12,7 +12,7 @@ module Program =
         banks
         |> Array.map PartOne.findHighestValuePair
         |> Array.sum
-        |> printfn "Part 1: the total output joltage is  %d."
+        |> printfn "Part 1: the total output joltage is %d."
         
         // ranges
         // |> Array.collect PartTwo.findSillyNumbersInRange

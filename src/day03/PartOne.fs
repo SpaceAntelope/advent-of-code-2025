@@ -22,6 +22,8 @@ module PartOne =
                 else
                     pair.[1] <- pair.[0]
                     pair.[0] <- n
-            
-        
+            else 
+                if n = pair.[0] && n > pair.[1]
+                then pair.[1] <- n
+
         pair.[0] * 10 + pair.[1]
