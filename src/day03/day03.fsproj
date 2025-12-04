@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Common.fs" />
+    <Compile Include="PartOne.fs" />
+    <Compile Include="PartTwo.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+
+</Project>
