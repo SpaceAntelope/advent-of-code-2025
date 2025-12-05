@@ -12,11 +12,11 @@ module Program =
         banks
         |> Array.map PartOne.findHighestValuePair
         |> Array.sum
-        |> printfn "Part 1: the total output joltage is %d."
+        |> printfn "Part 1: the total output joltage is %d"
         
-        // ranges
-        // |> Array.collect PartTwo.findSillyNumbersInRange
-        // |> Array.sum
-        // |> printfn "Part 2: If you add up all of the invalid IDs using these new rules you get %d."
+        banks
+        |> Array.map PartTwo.findHighestValueDozen
+        |> Array.sum
+        |> printfn "Part 2: the new total output joltage is %d"
         
         0

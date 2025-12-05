@@ -46,3 +46,31 @@ module VerificationTests =
         
         actual.Should().Be(expected)
         
+    [<Theory>]    
+    [<InlineData("987654321111111", 987654321111L)>]
+    [<InlineData("811111111111119", 811111111119L)>]
+    [<InlineData("234234234234278", 434234234278L)>]
+    [<InlineData("818181911112111", 888911112111L)>]
+    [<InlineData("123456789000000", 456789000000L)>]
+    [<InlineData("900000000000000", 900000000000L)>]
+    [<InlineData("900010000000000", 910000000000L)>]
+    [<InlineData("123123123123123", 323123123123L)>]
+    let ``Find highest value dozen in bank`` (bank:string) (expected:int64) =
+        
+        let actual = 
+            bank
+            |> Common.parseBank
+            |> PartTwo.findHighestValueDozen
+        
+        actual.Should().Be(expected)
+
+    [<Fact>]    
+    let ``Find sum of highest dozens in bank arrangement``() =
+        let expected = 3121910778619L
+        let actual = 
+            "./data/input.example"
+            |> Common.parse
+            |> Array.map PartTwo.findHighestValueDozen
+            |> Array.sum
+        
+        actual.Should().Be(expected)
