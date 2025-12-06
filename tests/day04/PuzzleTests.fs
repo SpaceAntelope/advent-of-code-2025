@@ -1,4 +1,4 @@
-namespace Day03.Tests
+namespace Day04.Tests
 
 open Xunit
 open Day04
@@ -34,5 +34,16 @@ module PuzzleTests =
             |> Common.parse
             |> PartOne.filterCellsByOccupiedNeighborCount 3
             |> Array.length
+
+        actual.Should().Be(expected)
+    
+    [<Fact>]
+    let ``Count all removable rolls successfully``() =
+        let expected = 43
+
+        let actual = 
+            "./data/input.example"
+            |> Common.parse
+            |> PartTwo.removeAllPossibleRolls            
 
         actual.Should().Be(expected)

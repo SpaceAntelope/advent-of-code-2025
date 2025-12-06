@@ -32,3 +32,10 @@ module Common =
                 for col in 0 .. cols-1 do
                     yield row,col
         |]
+
+
+    let countNearbyRolls (row, col) grid =
+        grid
+        |> neighbourhood (row,col)
+        |> Array.filter (fun x -> x = '@') 
+        |> Array.length 
