@@ -3,11 +3,13 @@
     <Project Path="src/day01/Day01.fsproj" />
     <Project Path="src/day02/Day02.fsproj" />
     <Project Path="src/day03/Day03.fsproj" />
+    <Project Path="src/day04/Day04.fsproj" />
   </Folder>
   <Folder Name="/tests/">
     <Project Path="tests/day01/Day01.Tests.fsproj" />
     <Project Path="tests/day02/Day02.Tests.fsproj" />
     <Project Path="tests/day03/Day03.Tests.fsproj" />
+    <Project Path="tests/day04/Day04.Tests.fsproj" />
   </Folder>
   <Folder Name="/solution items/">
     <File Path="Directory.Build.props" />
