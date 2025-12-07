@@ -2,9 +2,6 @@ namespace Day05
 
 module Program =
 
-    open Common
-    open PartOne    
-    open System.IO
 
     [<EntryPoint>]
     let main argv =
@@ -15,5 +12,11 @@ module Program =
         |> PartOne.findFresh
         |> Array.length
         |> printfn "%d of the available ingredient IDs are fresh."
+
+        db
+        |> _.Ranges
+        |> PartTwo.consolidate 
+        |> PartTwo.sumRangeMembers
+        |> printfn "%d ingredient IDs are considered to be fresh according to the fresh ingredient ID ranges."
 
         0

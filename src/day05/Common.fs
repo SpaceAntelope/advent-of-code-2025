@@ -10,6 +10,7 @@ module Common =
         { Start: int64; End: int64 }     
             with 
                 member x.Contains(value: int64) = value >= x.Start && value <= x.End
+                override x.ToString() = $"{x.Start}-{x.End}"
     module Range =
         let Contains value (range: Range) = value >= range.Start && value <= range.End
 

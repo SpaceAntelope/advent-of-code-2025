@@ -6,6 +6,8 @@ module PuzzleTests =
     open Day05
     open Day05.Common
 
+    let tee x = printfn "%A" x; x
+
     [<Fact>]
     let ``Parse input example correctly`` () = 
         let expected = {
@@ -34,5 +36,18 @@ module PuzzleTests =
             |> Common.parse 
             |> PartOne.findFresh
             |> Array.length
+
+        actual.Should().Be(expected)
+
+    [<Fact>]
+    let ``Calculate correct amount of unique fresh indices``() =
+        let expected = 14
+
+        let actual = 
+            "./data/input.example"
+            |> Common.parse 
+            |> _.Ranges
+            |> PartTwo.consolidate             
+            |> PartTwo.sumRangeMembers
 
         actual.Should().Be(expected)
