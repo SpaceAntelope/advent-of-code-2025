@@ -4,5 +4,6 @@
         <TargetFramework>net9.0</TargetFramework>
         <UseArtifactsOutput>true</UseArtifactsOutput>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <LangVersion>preview</LangVersion>
     </PropertyGroup>
 </Project>
