@@ -6,6 +6,7 @@
     <Project Path="src/day04/Day04.fsproj" />
     <Project Path="src/day05/Day05.fsproj" />
     <Project Path="src/day06/Day06.fsproj" />
+    <Project Path="src/day07/Day07.fsproj" />
   </Folder>
   <Folder Name="/tests/">
     <Project Path="tests/day01/Day01.Tests.fsproj" />
@@ -14,6 +15,7 @@
     <Project Path="tests/day04/Day04.Tests.fsproj" />
     <Project Path="tests/day05/Day05.Tests.fsproj" />
     <Project Path="tests/day06/Day06.Tests.fsproj" />
+    <Project Path="tests/day07/Day07.Tests.fsproj" />
   </Folder>
   <Folder Name="/solution items/">
     <File Path="Directory.Build.props" />
