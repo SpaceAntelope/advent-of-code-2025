@@ -49,39 +49,12 @@ module PuzzleTests =
 
         actual.Should().Be(expected)
 
-        
+    [<Fact>]
+    let ``Calculate route count for example dataset correctly`` () =
+        let expected = 40
+        let actual =
+            "./data/input.example"
+            |> parse
+            |> PartTwo.countTheRoutes
 
-    // let advancedExpected =
-    //     [| { Operands = [| 4; 431; 623 |]
-    //          Operator = Plus }
-    //        { Operands = [| 175; 581; 32 |]
-    //          Operator = Times }
-    //        { Operands = [| 8; 248; 369 |]
-    //          Operator = Plus }
-    //        { Operands = [| 356; 24; 1 |]
-    //          Operator = Times } |]
-
-    // [<Fact>]
-    // let ``Parse advanced cephalopod math correctly`` () =
-
-    //     let actual =
-    //         "./data/input.example" 
-    //         |> Day07.PartTwo.parse
-
-    //     actual.Should().Be(advancedExpected)
-
-    // let ``Calculate advanced results for example dataset correctly`` () =
-    //     let expected = [| 1058L; 3253600L; 625L; 8544L|]
-
-    //     let actual =
-    //         "./data/input.example"
-    //         |> Day07.PartTwo.parse
-    //         |> Array.map Cephaloperation.calculate
-
-    //     actual.Should().Be(expected) |> ignore
-
-    //     let expectedSum = 3263827
-    //     let actualSum = actual |> Array.sum
-
-    //     actualSum.Should().Be(expectedSum)
-
+        actual.Should().Be(expected)

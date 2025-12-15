@@ -12,6 +12,11 @@ module Program =
         |> parse
         |> PartOne.countTheSplits
         |> printfn "The beam will be split %d times."
+
+        file
+        |> parse
+        |> PartTwo.countTheRoutes
+        |> printfn "In total, a single tachyon particle will end up on %d different timelines."
        
 
         0

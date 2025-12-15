@@ -17,20 +17,13 @@ module PartOne =
         let rowCount = grid |> Array2D.length1
         let colCount = grid |> Array2D.length2
         let indexes = grid |> allIndexes
-        // let splitterIndices = 
-        //     indexes
-        //     |> Array.filter (fun (r,c) -> grid[r,c] = Split)
-
         let startIndex = indexes |> Array.find (fun (r,c) -> grid.[r,c] = Start)
         
         let rec doTheSplits rowIndex (beamIndexes: int[]) splitCount =
-            //printf "%d %A %d\t" rowIndex beamIndexes splitCount
 
             let newSplitters = 
                 beamIndexes 
                 |> Array.filter (fun col -> grid.[rowIndex, col] = Split)
-
-            //printf "New splitter cols %A\t" newSplitters
 
             let newBeamIndexes = 
                 newSplitters 
@@ -41,8 +34,6 @@ module PartOne =
                 |> Array.except newSplitters
 
             let newSplitCount = splitCount + newSplitters.Length
-
-            //printfn "New beam indexes %A %d" newBeamIndexes newSplitCount
 
             if rowIndex < rowCount - 1
             then doTheSplits (rowIndex+1) newBeamIndexes newSplitCount
